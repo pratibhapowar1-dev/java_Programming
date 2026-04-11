@@ -1,14 +1,16 @@
 import java.util.*;
 
-class Dispaly
+class Divisible
 {
-    public void Dispaly(int iNo)
+    public boolean CheckDivisible(int iNo1, int iNo2)
     {
-        int iCnt = 0;
-
-        for( iCnt = 2; iCnt<=iNo; iCnt=iCnt+2 )
+        if(iNo1 % iNo2 == 0)
         {
-            System.out.print(iCnt+"\t");
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
@@ -17,16 +19,29 @@ class program23
 {
     public static void main(String A[])
     {
-        int iValue = 0;
+        int iValue1 = 0, iValue2 = 0;
+        boolean bRet = false;
 
         Scanner sobj = new Scanner(System.in);
 
-        System.out.println("Enter the frequancy : ");
-        iValue = sobj.nextInt();
+        System.out.println("Enter the first number : ");
+        iValue1 = sobj.nextInt();
 
-        Dispaly dobj = new Dispaly();
+        System.out.println("Enter thr second number :");
+        iValue2 = sobj.nextInt();
 
-        dobj.Dispaly(iValue);
+        Divisible dobj = new Divisible();
+
+        bRet = dobj.CheckDivisible(iValue1, iValue2);
+
+        if(bRet == true)
+        {
+            System.out.println("is a completly Divisible number ");
+        }
+        else
+        {
+            System.out.println("is not a divisible number ");
+        }
+
     }
-  
 }
