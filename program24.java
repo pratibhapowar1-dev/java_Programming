@@ -6,14 +6,14 @@ class Dispaly
     {
         int iCnt = 0;
 
-        for( iCnt = 2; iCnt<=iNo; iCnt=iCnt+2 )
+        for( iCnt = 2; iCnt<=iNo; iCnt+=2)
         {
             System.out.print(iCnt+"\t");
         }
     }
 }
 
-class program23
+class program24
 {
     public static void main(String A[])
     {
